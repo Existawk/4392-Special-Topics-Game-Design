@@ -6,7 +6,7 @@ as well as being fun to play. The former characteristic is objective, though oft
 adequately while the latter is subjective, though easily demonstrated.
 
 ---
-This project was worked on by
+This project was created using Godot worked on by
 [Devin J Brown](https://github.com/devin-j-brown),
 [Alexander Nguyen](https://github.com/amusealex),
 [Edmond Doan](https://github.com/edmonddoan),

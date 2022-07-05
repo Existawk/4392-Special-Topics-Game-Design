@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Options/buttons/LevelButton.tscn" type="PackedScene" id=1]
+
+[node name="BackButton" instance=ExtResource( 1 )]
+scene_to_load = "res://HomeScreen/HomeScreen.tscn"
+
+[node name="Label" parent="." index="0"]
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Back"
+align = 1

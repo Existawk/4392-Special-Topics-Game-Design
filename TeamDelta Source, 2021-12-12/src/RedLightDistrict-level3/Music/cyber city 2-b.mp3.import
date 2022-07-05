@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cyber city 2-b.mp3-54e6ebbfb749769a3eb4cc59929e63b5.mp3str"
+
+[deps]
+
+source_file="res://RedLightDistrict-level3/Music/cyber city 2-b.mp3"
+dest_files=[ "res://.import/cyber city 2-b.mp3-54e6ebbfb749769a3eb4cc59929e63b5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

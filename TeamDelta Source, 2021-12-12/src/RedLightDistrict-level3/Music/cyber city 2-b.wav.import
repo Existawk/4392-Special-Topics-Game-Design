@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cyber city 2-b.wav-fccf0a749e794e9c7dd2d2190ec8c6eb.sample"
+
+[deps]
+
+source_file="res://RedLightDistrict-level3/Music/cyber city 2-b.wav"
+dest_files=[ "res://.import/cyber city 2-b.wav-fccf0a749e794e9c7dd2d2190ec8c6eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/INTRNLCMD_Supra.mp3-6d84264dad7d66b7ed4ef4208782fc6d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/INTRNLCMD_Supra.mp3"
+dest_files=[ "res://.import/INTRNLCMD_Supra.mp3-6d84264dad7d66b7ed4ef4208782fc6d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Vladmsorensen_RogueShadow.mp3-6d0e52f5e823d6bc0d6d3c4839152a70.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/Vladmsorensen_RogueShadow.mp3"
+dest_files=[ "res://.import/Vladmsorensen_RogueShadow.mp3-6d0e52f5e823d6bc0d6d3c4839152a70.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

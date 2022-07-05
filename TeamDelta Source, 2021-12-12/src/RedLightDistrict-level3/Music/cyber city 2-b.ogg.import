@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cyber city 2-b.ogg-ae667ae8e4a3d913b7b0c54650100834.oggstr"
+
+[deps]
+
+source_file="res://RedLightDistrict-level3/Music/cyber city 2-b.ogg"
+dest_files=[ "res://.import/cyber city 2-b.ogg-ae667ae8e4a3d913b7b0c54650100834.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

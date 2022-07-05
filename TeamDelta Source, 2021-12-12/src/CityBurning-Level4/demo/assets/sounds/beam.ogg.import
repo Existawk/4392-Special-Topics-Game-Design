@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beam.ogg-337551b87a449c5d10c4962b6fb3d9b9.oggstr"
+
+[deps]
+
+source_file="res://CityBurning-Level4/demo/assets/sounds/beam.ogg"
+dest_files=[ "res://.import/beam.ogg-337551b87a449c5d10c4962b6fb3d9b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,175 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://fonts/Valorant Font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/3DS BOLD.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Options/buttons/Level3Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Options/buttons/Level2Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Options/buttons/Level5Button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Options/buttons/Level1Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Options/backgroundsq/lv1bg.png" type="Texture" id=7]
+[ext_resource path="res://Options/buttons/Level4Button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://fonts/val_32.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Options/buttons/BackButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Options/OptionScreen.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="OptionScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="VBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 60.0
+margin_right = 904.0
+margin_bottom = 560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Options"]
+margin_top = 15.0
+margin_right = 784.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = SubResource( 1 )
+text = "Options"
+align = 1
+
+[node name="LevelSelection" type="HBoxContainer" parent="Options"]
+margin_top = 83.0
+margin_right = 784.0
+margin_bottom = 333.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Levels" type="VBoxContainer" parent="Options/LevelSelection"]
+margin_right = 390.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 12
+alignment = 1
+
+[node name="Level1Button" parent="Options/LevelSelection/Levels" instance=ExtResource( 6 )]
+margin_top = 1.0
+margin_right = 390.0
+margin_bottom = 41.0
+
+[node name="Level2Button" parent="Options/LevelSelection/Levels" instance=ExtResource( 4 )]
+margin_top = 53.0
+margin_right = 390.0
+margin_bottom = 93.0
+
+[node name="Level3Button" parent="Options/LevelSelection/Levels" instance=ExtResource( 3 )]
+margin_top = 105.0
+margin_right = 390.0
+margin_bottom = 145.0
+
+[node name="Level4Button" parent="Options/LevelSelection/Levels" instance=ExtResource( 8 )]
+margin_top = 157.0
+margin_right = 390.0
+margin_bottom = 197.0
+
+[node name="Level5Button" parent="Options/LevelSelection/Levels" instance=ExtResource( 5 )]
+margin_top = 209.0
+margin_right = 390.0
+margin_bottom = 249.0
+scene_to_load = "res://level5.tscn"
+
+[node name="CenterContainer" type="CenterContainer" parent="Options/LevelSelection"]
+margin_left = 394.0
+margin_right = 784.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Options/LevelSelection/CenterContainer"]
+margin_left = 70.0
+margin_right = 320.0
+margin_bottom = 250.0
+texture = ExtResource( 7 )
+
+[node name="MusicOption" type="HBoxContainer" parent="Options"]
+margin_top = 337.0
+margin_right = 784.0
+margin_bottom = 416.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MusicLabel" type="Label" parent="Options/MusicOption"]
+margin_right = 258.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Music:"
+align = 1
+valign = 1
+
+[node name="MusicOnButton" type="Button" parent="Options/MusicOption"]
+margin_left = 262.0
+margin_right = 521.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+
+[node name="OnLabel" type="Label" parent="Options/MusicOption/MusicOnButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 9 )
+text = "On"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicOffButton" type="Button" parent="Options/MusicOption"]
+margin_left = 525.0
+margin_right = 784.0
+margin_bottom = 79.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+
+[node name="OffLabel" type="Label" parent="Options/MusicOption/MusicOffButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 9 )
+text = "Off"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Options"]
+margin_top = 420.0
+margin_right = 784.0
+margin_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackButton" parent="Options/CenterContainer" instance=ExtResource( 10 )]
+margin_left = 212.0
+margin_top = 20.0
+margin_right = 572.0
+margin_bottom = 60.0

@@ -1,0 +1,49 @@
+All assets are used are under the Creative Commons Zero License or are from Royalty Free sources that the author grants usage.
+Credit goes to the creators who made these assets available for us to use for this personal class project. 
+
+Main Character Sprites: https://oco.itch.io/cyberpunk-character-pack-2
+Author: 0c0
+
+
+Enemy Sprites: https://astrobob.itch.io/animated-pixel-art-skeleton
+Author: AstroBob
+ 
+Shuriken: https://dk-happy.itch.io/shuriken-ninja
+Author: DK Happy
+
+SFX
+Melee Audio: https://opengameart.org/content/3-melee-sounds
+Shuriken Audio: https://opengameart.org/content/knife-sharpening-slice-1
+Jump & Run Audio: https://opengameart.org/content/jump-and-run-and-stand
+
+
+Main Menu:
+Music: https://www.youtube.com/watch?v=Ucj72U8eJpM 
+
+Level 1:
+Tilse Assets Link: https://craftpix.net/freebies/free-industrial-zone-tileset-pixel-art/
+Author: Craftpix.net
+Music: https://www.youtube.com/watch?v=kp_M_hlU4jE
+
+Level 2: 
+Tile Assets Link: https://sirnosir.itch.io/pixelwhale-sf
+Author: Sirnosir
+Music: https://www.youtube.com/watch?v=ofRmeR3TYuE 
+
+Level 3:
+Tile Assets Link: https://ansimuz.itch.io/cyberpunk-street-environment
+Author: Ansimuz
+Music: https://www.youtube.com/watch?v=FAGQwPmglAM 
+
+Level 4:
+Tile Assets Link: https://ansimuz.itch.io/warped-city
+Author: Ansimuz
+Music: https://www.youtube.com/watch?v=3Y5ksi1gpbg 
+
+Level 5:
+Tile Assets Link: https://mattwalkden.itch.io/lunar-battle-pack
+Author: MattWalkden
+Music: https://www.youtube.com/watch?v=erznjYY0Oh0 
+ 
+Game Over:
+Music https://www.youtube.com/watch?v=vN4-xjIcOSA

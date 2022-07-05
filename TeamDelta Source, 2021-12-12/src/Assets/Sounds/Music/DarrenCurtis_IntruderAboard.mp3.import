@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DarrenCurtis_IntruderAboard.mp3-5dc0d9e5e6ddad59a957117b71b7d393.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/DarrenCurtis_IntruderAboard.mp3"
+dest_files=[ "res://.import/DarrenCurtis_IntruderAboard.mp3-5dc0d9e5e6ddad59a957117b71b7d393.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

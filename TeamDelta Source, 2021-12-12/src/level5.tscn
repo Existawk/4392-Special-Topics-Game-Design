@@ -1,0 +1,1971 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://GalacticEnd-Level5/Lunar Lander Upload/Asset-Sheet-with-grid.png" type="Texture" id=1]
+[ext_resource path="res://Character/MainPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CityBurning-Level4/ENVIRONMENT/background/skyline-b.png" type="Texture" id=3]
+[ext_resource path="res://GalacticEnd-Level5/Lunar Lander Upload/Moon Background/Surface_Layer4.png" type="Texture" id=4]
+[ext_resource path="res://GalacticEnd-Level5/KWIIOk.png" type="Texture" id=5]
+[ext_resource path="res://GalacticEnd-Level5/Lunar Lander Upload/Moon Background/Surface_Layer2.png" type="Texture" id=6]
+[ext_resource path="res://GalacticEnd-Level5/Lunar Lander Upload/Asset-Sheet-with-transparency.png" type="Texture" id=7]
+[ext_resource path="res://Enemies/Enemy1/Enemy1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Pause/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://NextLv/NextLevel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Sounds/Music/Vladmsorensen_Fitpunk.mp3" type="AudioStream" id=11]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 5.08331, 30.088, 11.449, 23.1435, 23.6018, 10.9907, 30.5463, 12.7269, 31.7037, 8.67592, 49.0648, 1.15277, 58.324, 12.1481, 65, 30.6667, 62.9537, 44.5555, 51.9583, 47.4491, 47.3287, 57.287, 27.6528, 61.338, 16.6573, 57.287, 9.13422, 57.287, 5.66199, 51.5, 2.18976, 40.5046 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 4.2482, 27.4434, 9.36472, 20.2338, 12.6207, 20.0013, 16.8069, 15.3499, 24.9467, 12.7917, 36.5752, 9.30314, 41.4591, 15.3499, 48.9012, 21.6292, 49.1338, 29.7691, 51.4595, 36.7462, 47.0407, 45.1186, 37.0403, 50.0025, 28.6678, 49.3048, 25.1793, 50.9328, 10.7601, 45.3512, 9.13214, 40.4672 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 48, 16, 0, 16, 0, 0.705933, 48, 0.705933 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 49, 48, 0, 48, 0, 0.0779495, 49, 0.0779495 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 49, 48, 0.65937, 48, 0.65937, 0.732048, 49, 0.732048 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 15, 49, 0.49865, 49, 0.49865, 0.538239, 15, 0.538239 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 15.6465, 14, 0.52961, 14, 0.52961, 0.958939, 15.6465, 0.958939 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 1.39079, 14.4704, 13.9882, 1.29156, 17.6705, 0.322533, 32.3998, 15.4395 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 11.2052, 13.327, 22.6011, 3.79166, 24.4616, 4.2568, 27.485, 22.6297, 25.6245, 29.1416, 21.9034, 33.0952, 19.1125, 33.3278, 11.4378, 39.142, 7.01901, 39.142, 4.46078, 31.2347, 3.76306, 25.4205, 5.15848, 16.3503 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 33, 26, 1.01223, 26, 1.01223, 1.98021, 33, 1.98021 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 33, 15.4858, 1.20605, 15.4858, 1.20605, 0.950302, 33, 0.950302 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 33, 0, 33, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 32.6375, 9, 0.271751, 9, 0.271751, 2.49969, 32.6375, 2.49969 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 33, 14.7635, 2.44366, 14.7635, 2.44366, 0, 33, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 17, 18.1201, 0.646523, 18.1201, 0.646523, 1.84033, 17, 1.84033 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 18, 16, 0.366768, 16, 0.366768, 0.206039, 18, 0.206039 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 3.83533, 19.2576, 10.5798, 12.7457, 25.9293, 8.55952, 32.2086, 12.048, 32.4412, 20.4205, 28.7201, 23.2113, 28.4875, 26.0021, 24.3013, 29.0255, 18.022, 29.4906, 21.0453, 25.537, 14.766, 25.537, 8.95184, 24.6067 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 30.1534, 6.56162, 36.4327, 2.14283, 47.1309, 0.980003, 52.7125, 5.63136, 58.0616, 10.5153, 57.1313, 16.562, 61.7827, 23.7717, 62.7129, 33.0744, 57.1313, 43.3074, 46.8983, 55.1683, 37.8282, 57.2614, 20.6181, 57.494, 5.26862, 53.0752, 1.54755, 39.3537, 4.8035, 28.1905, 17.3622, 12.1433, 25.502, 10.9804 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 23, 14.7601, 0.465561, 14.7601, 0.465561, 1.7363, 23, 1.7363 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 22.4685, 12.1321, 1.53739, 12.1321, 1.53739, 0.736298, 22.4685, 0.736298 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 23.8427, 12.8298, 1.98127, 12.8298, 1.98127, 1.43399, 23.8427, 1.43399 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 8.52756, 15.9575, 8.52756, 15.9575, 20.8536, 8.98042, 27.133, 5.02676, 34.3426, 6.1896, 41.3196, 14.0969, 45.971, 16.4226, 47.3664, 26.1905, 47.8315, 33.8652, 46.2036, 41.0748, 38.0637, 45.0285, 31.3192, 45.261, 26.9004, 48.7495, 16.6674, 46.6564, 7.13214, 38.7491, 1.78308, 25.9579, 8.29498, 16.19, 7.36472, 18.7483 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 15.4378, 15.0506, 17.5309, 12.4923, 24.9731, 5.98042, 28.6942, 7.84097, 31.2524, 20.8648, 31.7176, 28.7721, 28.2291, 35.5165, 21.4846, 40.1679, 12.4144, 41.7959, 8.22821, 35.9817, 7.29794, 28.3069, 8.9259, 21.0973, 10.3213, 17.1437 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 23.6628, 11.8056, 29.4498, 11.8056, 34.2723, 3.60725, 45.8464, 2.64275, 57.4205, 8.42979, 58.8672, 17.5926, 63.2075, 35.436, 60.314, 43.152, 51.1512, 45.5633, 44.8819, 54.7261, 29.4498, 60.5131, 16.9112, 56.1728, 9.67743, 56.6551, 2.9259, 48.4568, 1.47913, 32.5424, 8.23068, 22.8974 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 24.483, 2.42979, 33.1635, 4.84105, 43.7731, 14.9684, 46.1844, 28.4715, 40.3974, 42.939, 30.2701, 41.01, 23.0362, 43.9035, 7.12186, 38.5988, 5.67511, 32.8117, 3.74612, 23.1667, 11.4621, 10.6281 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 13.0509, 9.11266, 21.7315, 7.18364, 32.341, 3.32562, 45.8441, 15.8642, 51.1489, 31.7785, 45.8441, 39.4946, 31.8587, 43.8349, 20.2847, 43.3526, 6.78162, 35.1543, 3.40582, 27.4383, 3.40582, 19.24 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 25.4097, 6.66589, 30.2322, 21.6157, 29.2677, 34.1543, 17.6936, 38.0123, 8.04855, 37.5301, 9.49533, 26.9205, 10.4598, 17.2755 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 9.04492, 10.1671, 7.88208, 9.23679, 24.627, 5.5157, 31.1389, 9.23679, 30.9063, 17.8418, 25.3247, 21.5629, 18.8128, 25.9817, 16.2545, 25.9817, 18.1151, 22.7257, 9.51007, 22.028, 2.99817, 20.1675, 2.0679, 15.9813, 7.64954, 8.07396 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 5.85492, 30.9915, 19.8402, 15.0772, 36.7191, 4.46759, 51.1867, 3.98535, 58.4205, 12.1836, 59.385, 18.4529, 62.7608, 23.7577, 63.243, 41.1188, 51.6689, 47.3881, 42.9884, 58.9622, 30.9321, 59.9267, 9.23068, 57.5154, 4.89041, 45.4591 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 15.4575, 28.6366, 2.43668, 21.4028, 7.25919, 13.2045, 18.8333, 14.169, 26.0671, 9.34645, 33.3009, 13.6867, 32.8186, 19.956, 30.8896, 27.1898, 22.6913, 31.5301 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 23.2677, 1.80556, 24.2322, 17.7199, 25.679, 28.3295, 16.5161, 33.152, 6.38882, 37.9745, 2.53085, 28.8117, 3.97757, 18.2022, 6.87112, 10.9684, 13.6227, 7.59261 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 6.6705, 7.37962, 23.0671, 3.03935, 30.7831, 10.2731, 25.4784, 18.9537, 23.0671, 24.2585, 13.422, 25.223, 13.422, 20.4005, 5.22372, 19.9182, 3.77695, 12.2022 )
+
+[sub_resource type="TileSet" id=33]
+0/name = "Asset-Sheet-with-grid.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 287, 1, 65, 65 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Asset-Sheet-with-grid.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 356, 0, 56, 56 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Asset-Sheet-with-grid.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 433, 9, 30, 42 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 9 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Asset-Sheet-with-grid.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 492, 14, 38, 34 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 17 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Asset-Sheet-with-grid.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 288, 66, 65, 62 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 18 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Asset-Sheet-with-grid.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 358, 68, 53, 51 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 22 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Asset-Sheet-with-grid.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 429, 71, 38, 46 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 23 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Asset-Sheet-with-grid.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 494, 81, 34, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 28 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Asset-Sheet-with-grid.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 372, 178, 63, 70 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Asset-Sheet-with-grid.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 436, 180, 59, 65 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Asset-Sheet-with-grid.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 499, 182, 63, 63 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Asset-Sheet-with-grid.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 370, 249, 57, 56 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Asset-Sheet-with-grid.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 432, 248, 57, 60 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Asset-Sheet-with-grid.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 496, 248, 65, 60 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Asset-Sheet-with-grid.png 14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 47, 48, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape = SubResource( 3 )
+14/shape_one_way = false
+14/shape_one_way_margin = 1.0
+14/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+14/z_index = 0
+15/name = "Asset-Sheet-with-grid.png 15"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 49, 48 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape = SubResource( 4 )
+15/shape_one_way = false
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
+16/name = "Asset-Sheet-with-grid.png 16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 49, 0, 15, 49 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape = SubResource( 6 )
+16/shape_one_way = false
+16/shape_one_way_margin = 1.0
+16/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+16/z_index = 0
+17/name = "Asset-Sheet-with-grid.png 17"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 48, 49, 16, 14 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape = SubResource( 7 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+17/z_index = 0
+18/name = "Asset-Sheet-with-grid.png 18"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 64, 32, 33, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape = SubResource( 8 )
+18/shape_one_way = false
+18/shape_one_way_margin = 1.0
+18/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+18/z_index = 0
+19/name = "Asset-Sheet-with-grid.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 80, 64, 15, 33 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Asset-Sheet-with-grid.png 20"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 95, 70, 33, 26 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape = SubResource( 10 )
+20/shape_one_way = false
+20/shape_one_way_margin = 1.0
+20/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+20/z_index = 0
+21/name = "Asset-Sheet-with-grid.png 21"
+21/texture = ExtResource( 1 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 95, 97, 33, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape = SubResource( 11 )
+21/shape_one_way = false
+21/shape_one_way_margin = 1.0
+21/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+21/z_index = 0
+22/name = "Asset-Sheet-with-grid.png 22"
+22/texture = ExtResource( 1 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 138, 25, 13, 14 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Asset-Sheet-with-grid.png 23"
+23/texture = ExtResource( 1 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 72, 34, 9 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape = SubResource( 13 )
+23/shape_one_way = false
+23/shape_one_way_margin = 1.0
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+23/z_index = 0
+24/name = "Asset-Sheet-with-grid.png 24"
+24/texture = ExtResource( 1 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 1, 79, 15, 50 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Asset-Sheet-with-grid.png 25"
+25/texture = ExtResource( 1 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 30, 64, 33, 16 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape = SubResource( 14 )
+25/shape_one_way = false
+25/shape_one_way_margin = 1.0
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+25/z_index = 0
+26/name = "Asset-Sheet-with-grid.png 26"
+26/texture = ExtResource( 1 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 63, 62, 17, 34 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape = SubResource( 15 )
+26/shape_one_way = false
+26/shape_one_way_margin = 1.0
+26/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+26/z_index = 0
+27/name = "Asset-Sheet-with-grid.png 27"
+27/texture = ExtResource( 1 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 47, 96, 18, 16 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape = SubResource( 16 )
+27/shape_one_way = false
+27/shape_one_way_margin = 1.0
+27/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+27/z_index = 0
+28/name = "Asset-Sheet-with-grid.png 28"
+28/texture = ExtResource( 1 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 14, 222, 20, 19 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Asset-Sheet-with-grid.png 29"
+29/texture = ExtResource( 1 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 60, 218, 24, 28 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "Asset-Sheet-with-grid.png 30"
+30/texture = ExtResource( 1 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 106, 218, 27, 28 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "Asset-Sheet-with-grid.png 31"
+31/texture = ExtResource( 1 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 151, 213, 34, 35 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "Asset-Sheet-with-grid.png 32"
+32/texture = ExtResource( 1 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 200, 209, 32, 45 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+33/name = "Asset-Sheet-with-grid.png 33"
+33/texture = ExtResource( 1 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 200, 257, 31, 45 )
+33/tile_mode = 0
+33/occluder_offset = Vector2( 0, 0 )
+33/navigation_offset = Vector2( 0, 0 )
+33/shape_offset = Vector2( 0, 0 )
+33/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+33/shape_one_way = false
+33/shape_one_way_margin = 0.0
+33/shapes = [  ]
+33/z_index = 0
+34/name = "Asset-Sheet-with-grid.png 34"
+34/texture = ExtResource( 1 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 150, 260, 34, 38 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 0, 0 )
+34/navigation_offset = Vector2( 0, 0 )
+34/shape_offset = Vector2( 0, 0 )
+34/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+34/shape_one_way = false
+34/shape_one_way_margin = 0.0
+34/shapes = [  ]
+34/z_index = 0
+35/name = "Asset-Sheet-with-grid.png 35"
+35/texture = ExtResource( 1 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 106, 263, 26, 31 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+36/name = "Asset-Sheet-with-grid.png 36"
+36/texture = ExtResource( 1 )
+36/tex_offset = Vector2( 0, 0 )
+36/modulate = Color( 1, 1, 1, 1 )
+36/region = Rect2( 58, 267, 26, 26 )
+36/tile_mode = 0
+36/occluder_offset = Vector2( 0, 0 )
+36/navigation_offset = Vector2( 0, 0 )
+36/shape_offset = Vector2( 0, 0 )
+36/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+36/shape_one_way = false
+36/shape_one_way_margin = 0.0
+36/shapes = [  ]
+36/z_index = 0
+37/name = "Asset-Sheet-with-grid.png 37"
+37/texture = ExtResource( 1 )
+37/tex_offset = Vector2( 0, 0 )
+37/modulate = Color( 1, 1, 1, 1 )
+37/region = Rect2( 14, 270, 20, 20 )
+37/tile_mode = 0
+37/occluder_offset = Vector2( 0, 0 )
+37/navigation_offset = Vector2( 0, 0 )
+37/shape_offset = Vector2( 0, 0 )
+37/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+37/shape_one_way = false
+37/shape_one_way_margin = 0.0
+37/shapes = [  ]
+37/z_index = 0
+38/name = "Asset-Sheet-with-grid.png 38"
+38/texture = ExtResource( 1 )
+38/tex_offset = Vector2( 0, 0 )
+38/modulate = Color( 1, 1, 1, 1 )
+38/region = Rect2( 64, 129, 31, 30 )
+38/tile_mode = 0
+38/occluder_offset = Vector2( 0, 0 )
+38/navigation_offset = Vector2( 0, 0 )
+38/shape_offset = Vector2( 0, 0 )
+38/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+38/shape_one_way = false
+38/shape_one_way_margin = 0.0
+38/shapes = [  ]
+38/z_index = 0
+39/name = "Asset-Sheet-with-grid.png 39"
+39/texture = ExtResource( 1 )
+39/tex_offset = Vector2( 0, 0 )
+39/modulate = Color( 1, 1, 1, 1 )
+39/region = Rect2( 96, 128, 31, 31 )
+39/tile_mode = 0
+39/occluder_offset = Vector2( 0, 0 )
+39/navigation_offset = Vector2( 0, 0 )
+39/shape_offset = Vector2( 0, 0 )
+39/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+39/shape_one_way = false
+39/shape_one_way_margin = 0.0
+39/shapes = [  ]
+39/z_index = 0
+40/name = "Asset-Sheet-with-grid.png 40"
+40/texture = ExtResource( 1 )
+40/tex_offset = Vector2( 0, 0 )
+40/modulate = Color( 1, 1, 1, 1 )
+40/region = Rect2( 12, 173, 22, 20 )
+40/tile_mode = 0
+40/occluder_offset = Vector2( 0, 0 )
+40/navigation_offset = Vector2( 0, 0 )
+40/shape_offset = Vector2( 0, 0 )
+40/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+40/shape_one_way = false
+40/shape_one_way_margin = 0.0
+40/shapes = [  ]
+40/z_index = 0
+41/name = "Asset-Sheet-with-grid.png 41"
+41/texture = ExtResource( 1 )
+41/tex_offset = Vector2( 0, 0 )
+41/modulate = Color( 1, 1, 1, 1 )
+41/region = Rect2( 59, 172, 25, 24 )
+41/tile_mode = 0
+41/occluder_offset = Vector2( 0, 0 )
+41/navigation_offset = Vector2( 0, 0 )
+41/shape_offset = Vector2( 0, 0 )
+41/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+41/shape_one_way = false
+41/shape_one_way_margin = 0.0
+41/shapes = [  ]
+41/z_index = 0
+42/name = "Asset-Sheet-with-grid.png 42"
+42/texture = ExtResource( 1 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 105, 171, 27, 27 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "Asset-Sheet-with-grid.png 43"
+43/texture = ExtResource( 1 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 149, 164, 35, 38 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Asset-Sheet-with-grid.png 44"
+44/texture = ExtResource( 1 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 197, 162, 35, 44 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Asset-Sheet-with-grid.png 45"
+45/texture = ExtResource( 1 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 0, 352, 23, 15 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape = SubResource( 19 )
+45/shape_one_way = false
+45/shape_one_way_margin = 1.0
+45/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+45/z_index = 0
+46/name = "Asset-Sheet-with-grid.png 46"
+46/texture = ExtResource( 1 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 48, 353, 23, 13 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape = SubResource( 20 )
+46/shape_one_way = false
+46/shape_one_way_margin = 1.0
+46/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+46/z_index = 0
+47/name = "Asset-Sheet-with-grid.png 47"
+47/texture = ExtResource( 1 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 95, 353, 25, 14 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape = SubResource( 21 )
+47/shape_one_way = false
+47/shape_one_way_margin = 1.0
+47/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+47/z_index = 0
+48/name = "Asset-Sheet-with-grid.png 48"
+48/texture = ExtResource( 1 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 151, 373, 26, 36 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape_one_way = false
+48/shape_one_way_margin = 0.0
+48/shapes = [  ]
+48/z_index = 0
+49/name = "Asset-Sheet-with-grid.png 49"
+49/texture = ExtResource( 1 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 153, 422, 24, 34 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 0, 0 )
+49/navigation_offset = Vector2( 0, 0 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape_one_way = false
+49/shape_one_way_margin = 0.0
+49/shapes = [  ]
+49/z_index = 0
+50/name = "Asset-Sheet-with-grid.png 50"
+50/texture = ExtResource( 1 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 103, 376, 26, 31 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 0, 0 )
+50/navigation_offset = Vector2( 0, 0 )
+50/shape_offset = Vector2( 0, 0 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape_one_way = false
+50/shape_one_way_margin = 0.0
+50/shapes = [  ]
+50/z_index = 0
+51/name = "Asset-Sheet-with-grid.png 51"
+51/texture = ExtResource( 1 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 104, 426, 25, 29 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 0, 0 )
+51/navigation_offset = Vector2( 0, 0 )
+51/shape_offset = Vector2( 0, 0 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape_one_way = false
+51/shape_one_way_margin = 0.0
+51/shapes = [  ]
+51/z_index = 0
+52/name = "Asset-Sheet-with-grid.png 52"
+52/texture = ExtResource( 1 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 130, 3, 12, 8 )
+52/tile_mode = 0
+52/occluder_offset = Vector2( 0, 0 )
+52/navigation_offset = Vector2( 0, 0 )
+52/shape_offset = Vector2( 0, 0 )
+52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+52/shape_one_way = false
+52/shape_one_way_margin = 0.0
+52/shapes = [  ]
+52/z_index = 0
+53/name = "Asset-Sheet-with-grid.png 53"
+53/texture = ExtResource( 1 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 145, 2, 14, 10 )
+53/tile_mode = 0
+53/occluder_offset = Vector2( 0, 0 )
+53/navigation_offset = Vector2( 0, 0 )
+53/shape_offset = Vector2( 0, 0 )
+53/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+53/shape_one_way = false
+53/shape_one_way_margin = 0.0
+53/shapes = [  ]
+53/z_index = 0
+54/name = "Asset-Sheet-with-grid.png 54"
+54/texture = ExtResource( 1 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 160, 2, 15, 10 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 0, 0 )
+54/navigation_offset = Vector2( 0, 0 )
+54/shape_offset = Vector2( 0, 0 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+54/shape_one_way = false
+54/shape_one_way_margin = 0.0
+54/shapes = [  ]
+54/z_index = 0
+55/name = "Asset-Sheet-with-grid.png 55"
+55/texture = ExtResource( 1 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 176, 1, 15, 10 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 0, 0 )
+55/navigation_offset = Vector2( 0, 0 )
+55/shape_offset = Vector2( 0, 0 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape_one_way = false
+55/shape_one_way_margin = 0.0
+55/shapes = [  ]
+55/z_index = 0
+56/name = "Asset-Sheet-with-grid.png 56"
+56/texture = ExtResource( 1 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 144, 97, 14, 14 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 0, 0 )
+56/navigation_offset = Vector2( 0, 0 )
+56/shape_offset = Vector2( 0, 0 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+56/shape_one_way = false
+56/shape_one_way_margin = 0.0
+56/shapes = [  ]
+56/z_index = 0
+57/name = "Asset-Sheet-with-grid.png 57"
+57/texture = ExtResource( 1 )
+57/tex_offset = Vector2( 0, 0 )
+57/modulate = Color( 1, 1, 1, 1 )
+57/region = Rect2( 192, 82, 15, 11 )
+57/tile_mode = 0
+57/occluder_offset = Vector2( 0, 0 )
+57/navigation_offset = Vector2( 0, 0 )
+57/shape_offset = Vector2( 0, 0 )
+57/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+57/shape_one_way = false
+57/shape_one_way_margin = 0.0
+57/shapes = [  ]
+57/z_index = 0
+58/name = "Asset-Sheet-with-grid.png 58"
+58/texture = ExtResource( 1 )
+58/tex_offset = Vector2( 0, 0 )
+58/modulate = Color( 1, 1, 1, 1 )
+58/region = Rect2( 208, 82, 16, 10 )
+58/tile_mode = 0
+58/occluder_offset = Vector2( 0, 0 )
+58/navigation_offset = Vector2( 0, 0 )
+58/shape_offset = Vector2( 0, 0 )
+58/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+58/shape_one_way = false
+58/shape_one_way_margin = 0.0
+58/shapes = [  ]
+58/z_index = 0
+59/name = "Asset-Sheet-with-grid.png 59"
+59/texture = ExtResource( 1 )
+59/tex_offset = Vector2( 0, 0 )
+59/modulate = Color( 1, 1, 1, 1 )
+59/region = Rect2( 5, 135, 19, 18 )
+59/tile_mode = 0
+59/occluder_offset = Vector2( 0, 0 )
+59/navigation_offset = Vector2( 0, 0 )
+59/shape_offset = Vector2( 0, 0 )
+59/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+59/shape_one_way = false
+59/shape_one_way_margin = 0.0
+59/shapes = [  ]
+59/z_index = 0
+60/name = "Asset-Sheet-with-grid.png 60"
+60/texture = ExtResource( 1 )
+60/tex_offset = Vector2( 0, 0 )
+60/modulate = Color( 1, 1, 1, 1 )
+60/region = Rect2( 36, 131, 24, 24 )
+60/tile_mode = 0
+60/occluder_offset = Vector2( 0, 0 )
+60/navigation_offset = Vector2( 0, 0 )
+60/shape_offset = Vector2( 0, 0 )
+60/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+60/shape_one_way = false
+60/shape_one_way_margin = 0.0
+60/shapes = [  ]
+60/z_index = 0
+61/name = "Asset-Sheet-with-grid.png 61"
+61/texture = ExtResource( 1 )
+61/tex_offset = Vector2( 0, 0 )
+61/modulate = Color( 1, 1, 1, 1 )
+61/region = Rect2( 128, 128, 30, 32 )
+61/tile_mode = 0
+61/occluder_offset = Vector2( 0, 0 )
+61/navigation_offset = Vector2( 0, 0 )
+61/shape_offset = Vector2( 0, 0 )
+61/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+61/shape_one_way = false
+61/shape_one_way_margin = 0.0
+61/shapes = [  ]
+61/z_index = 0
+62/name = "Asset-Sheet-with-grid.png 62"
+62/texture = ExtResource( 1 )
+62/tex_offset = Vector2( 0, 0 )
+62/modulate = Color( 1, 1, 1, 1 )
+62/region = Rect2( 223, 365, 15, 19 )
+62/tile_mode = 0
+62/occluder_offset = Vector2( 0, 0 )
+62/navigation_offset = Vector2( 0, 0 )
+62/shape_offset = Vector2( 0, 0 )
+62/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+62/shape_one_way = false
+62/shape_one_way_margin = 0.0
+62/shapes = [  ]
+62/z_index = 0
+63/name = "Asset-Sheet-with-transparency.png 63"
+63/texture = ExtResource( 7 )
+63/tex_offset = Vector2( 0, 0 )
+63/modulate = Color( 1, 1, 1, 1 )
+63/region = Rect2( 199, 160, 35, 47 )
+63/tile_mode = 0
+63/occluder_offset = Vector2( 0, 0 )
+63/navigation_offset = Vector2( 0, 0 )
+63/shape_offset = Vector2( 0, 0 )
+63/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+63/shape_one_way = false
+63/shape_one_way_margin = 0.0
+63/shapes = [  ]
+63/z_index = 0
+64/name = "Asset-Sheet-with-transparency.png 64"
+64/texture = ExtResource( 7 )
+64/tex_offset = Vector2( 0, 0 )
+64/modulate = Color( 1, 1, 1, 1 )
+64/region = Rect2( 198, 210, 34, 44 )
+64/tile_mode = 0
+64/occluder_offset = Vector2( 0, 0 )
+64/navigation_offset = Vector2( 0, 0 )
+64/shape_offset = Vector2( 0, 0 )
+64/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+64/shape_one_way = false
+64/shape_one_way_margin = 0.0
+64/shapes = [  ]
+64/z_index = 0
+65/name = "Asset-Sheet-with-transparency.png 65"
+65/texture = ExtResource( 7 )
+65/tex_offset = Vector2( 0, 0 )
+65/modulate = Color( 1, 1, 1, 1 )
+65/region = Rect2( 198, 258, 34, 45 )
+65/tile_mode = 0
+65/occluder_offset = Vector2( 0, 0 )
+65/navigation_offset = Vector2( 0, 0 )
+65/shape_offset = Vector2( 0, 0 )
+65/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+65/shape_one_way = false
+65/shape_one_way_margin = 0.0
+65/shapes = [  ]
+65/z_index = 0
+66/name = "Asset-Sheet-with-transparency.png 66"
+66/texture = ExtResource( 7 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 288, 65, 65, 63 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape = SubResource( 24 )
+66/shape_one_way = false
+66/shape_one_way_margin = 1.0
+66/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+66/z_index = 0
+67/name = "Asset-Sheet-with-transparency.png 67"
+67/texture = ExtResource( 7 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 360, 71, 49, 46 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape = SubResource( 25 )
+67/shape_one_way = false
+67/shape_one_way_margin = 1.0
+67/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+67/z_index = 0
+68/name = "Asset-Sheet-with-transparency.png 68"
+68/texture = ExtResource( 7 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 356, 5, 57, 48 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape = SubResource( 26 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+68/z_index = 0
+69/name = "Asset-Sheet-with-transparency.png 69"
+69/texture = ExtResource( 7 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 429, 6, 37, 40 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape = SubResource( 27 )
+69/shape_one_way = false
+69/shape_one_way_margin = 1.0
+69/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+69/z_index = 0
+70/name = "Asset-Sheet-with-transparency.png 70"
+70/texture = ExtResource( 7 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 287, 0, 66, 62 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 0, 0 )
+70/navigation_offset = Vector2( 0, 0 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape = SubResource( 29 )
+70/shape_one_way = false
+70/shape_one_way_margin = 1.0
+70/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+70/z_index = 0
+71/name = "Asset-Sheet-with-transparency.png 71"
+71/texture = ExtResource( 7 )
+71/tex_offset = Vector2( 0, 0 )
+71/modulate = Color( 1, 1, 1, 1 )
+71/region = Rect2( 492, 12, 42, 41 )
+71/tile_mode = 0
+71/occluder_offset = Vector2( 0, 0 )
+71/navigation_offset = Vector2( 0, 0 )
+71/shape_offset = Vector2( 0, 0 )
+71/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+71/shape = SubResource( 30 )
+71/shape_one_way = false
+71/shape_one_way_margin = 1.0
+71/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+71/z_index = 0
+72/name = "Asset-Sheet-with-transparency.png 72"
+72/texture = ExtResource( 7 )
+72/tex_offset = Vector2( 0, 0 )
+72/modulate = Color( 1, 1, 1, 1 )
+72/region = Rect2( 435, 75, 29, 40 )
+72/tile_mode = 0
+72/occluder_offset = Vector2( 0, 0 )
+72/navigation_offset = Vector2( 0, 0 )
+72/shape_offset = Vector2( 0, 0 )
+72/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+72/shape = SubResource( 31 )
+72/shape_one_way = false
+72/shape_one_way_margin = 1.0
+72/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+72/z_index = 0
+73/name = "Asset-Sheet-with-transparency.png 73"
+73/texture = ExtResource( 7 )
+73/tex_offset = Vector2( 0, 0 )
+73/modulate = Color( 1, 1, 1, 1 )
+73/region = Rect2( 495, 81, 36, 31 )
+73/tile_mode = 0
+73/occluder_offset = Vector2( 0, 0 )
+73/navigation_offset = Vector2( 0, 0 )
+73/shape_offset = Vector2( 0, 0 )
+73/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+73/shape = SubResource( 32 )
+73/shape_one_way = false
+73/shape_one_way_margin = 1.0
+73/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+73/z_index = 0
+74/name = "Asset-Sheet-with-transparency.png 74"
+74/texture = ExtResource( 7 )
+74/tex_offset = Vector2( 0, 0 )
+74/modulate = Color( 1, 1, 1, 1 )
+74/region = Rect2( -3, 78, 24, 52 )
+74/tile_mode = 0
+74/occluder_offset = Vector2( 0, 0 )
+74/navigation_offset = Vector2( 0, 0 )
+74/shape_offset = Vector2( 0, 0 )
+74/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+74/shape_one_way = false
+74/shape_one_way_margin = 0.0
+74/shapes = [  ]
+74/z_index = 0
+75/name = "Asset-Sheet-with-transparency.png 75"
+75/texture = ExtResource( 7 )
+75/tex_offset = Vector2( 0, 0 )
+75/modulate = Color( 1, 1, 1, 1 )
+75/region = Rect2( 49, 94, 19, 17 )
+75/tile_mode = 0
+75/occluder_offset = Vector2( 0, 0 )
+75/navigation_offset = Vector2( 0, 0 )
+75/shape_offset = Vector2( 0, 0 )
+75/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+75/shape_one_way = false
+75/shape_one_way_margin = 0.0
+75/shapes = [  ]
+75/z_index = 0
+76/name = "Asset-Sheet-with-transparency.png 76"
+76/texture = ExtResource( 7 )
+76/tex_offset = Vector2( 0, 0 )
+76/modulate = Color( 1, 1, 1, 1 )
+76/region = Rect2( 151, 214, 35, 36 )
+76/tile_mode = 0
+76/occluder_offset = Vector2( 0, 0 )
+76/navigation_offset = Vector2( 0, 0 )
+76/shape_offset = Vector2( 0, 0 )
+76/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+76/shape_one_way = false
+76/shape_one_way_margin = 0.0
+76/shapes = [  ]
+76/z_index = 0
+77/name = "Asset-Sheet-with-transparency.png 77"
+77/texture = ExtResource( 7 )
+77/tex_offset = Vector2( 0, 0 )
+77/modulate = Color( 1, 1, 1, 1 )
+77/region = Rect2( 105, 219, 30, 27 )
+77/tile_mode = 0
+77/occluder_offset = Vector2( 0, 0 )
+77/navigation_offset = Vector2( 0, 0 )
+77/shape_offset = Vector2( 0, 0 )
+77/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+77/shape_one_way = false
+77/shape_one_way_margin = 0.0
+77/shapes = [  ]
+77/z_index = 0
+78/name = "Asset-Sheet-with-transparency.png 78"
+78/texture = ExtResource( 7 )
+78/tex_offset = Vector2( 0, 0 )
+78/modulate = Color( 1, 1, 1, 1 )
+78/region = Rect2( 150, 265, 37, 32 )
+78/tile_mode = 0
+78/occluder_offset = Vector2( 0, 0 )
+78/navigation_offset = Vector2( 0, 0 )
+78/shape_offset = Vector2( 0, 0 )
+78/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+78/shape_one_way = false
+78/shape_one_way_margin = 0.0
+78/shapes = [  ]
+78/z_index = 0
+79/name = "Asset-Sheet-with-transparency.png 79"
+79/texture = ExtResource( 7 )
+79/tex_offset = Vector2( 0, 0 )
+79/modulate = Color( 1, 1, 1, 1 )
+79/region = Rect2( 53, 216, 35, 35 )
+79/tile_mode = 0
+79/occluder_offset = Vector2( 0, 0 )
+79/navigation_offset = Vector2( 0, 0 )
+79/shape_offset = Vector2( 0, 0 )
+79/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+79/shape_one_way = false
+79/shape_one_way_margin = 0.0
+79/shapes = [  ]
+79/z_index = 0
+80/name = "Asset-Sheet-with-transparency.png 80"
+80/texture = ExtResource( 7 )
+80/tex_offset = Vector2( 0, 0 )
+80/modulate = Color( 1, 1, 1, 1 )
+80/region = Rect2( 56, 267, 32, 29 )
+80/tile_mode = 0
+80/occluder_offset = Vector2( 0, 0 )
+80/navigation_offset = Vector2( 0, 0 )
+80/shape_offset = Vector2( 0, 0 )
+80/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+80/shape_one_way = false
+80/shape_one_way_margin = 0.0
+80/shapes = [  ]
+80/z_index = 0
+81/name = "Asset-Sheet-with-transparency.png 81"
+81/texture = ExtResource( 7 )
+81/tex_offset = Vector2( 0, 0 )
+81/modulate = Color( 1, 1, 1, 1 )
+81/region = Rect2( 55, 169, 33, 31 )
+81/tile_mode = 0
+81/occluder_offset = Vector2( 0, 0 )
+81/navigation_offset = Vector2( 0, 0 )
+81/shape_offset = Vector2( 0, 0 )
+81/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+81/shape_one_way = false
+81/shape_one_way_margin = 0.0
+81/shapes = [  ]
+81/z_index = 0
+82/name = "Asset-Sheet-with-transparency.png 82"
+82/texture = ExtResource( 7 )
+82/tex_offset = Vector2( 0, 0 )
+82/modulate = Color( 1, 1, 1, 1 )
+82/region = Rect2( 104, 166, 30, 35 )
+82/tile_mode = 0
+82/occluder_offset = Vector2( 0, 0 )
+82/navigation_offset = Vector2( 0, 0 )
+82/shape_offset = Vector2( 0, 0 )
+82/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+82/shape_one_way = false
+82/shape_one_way_margin = 0.0
+82/shapes = [  ]
+82/z_index = 0
+83/name = "Asset-Sheet-with-transparency.png 83"
+83/texture = ExtResource( 7 )
+83/tex_offset = Vector2( 0, 0 )
+83/modulate = Color( 1, 1, 1, 1 )
+83/region = Rect2( 147, 164, 40, 40 )
+83/tile_mode = 0
+83/occluder_offset = Vector2( 0, 0 )
+83/navigation_offset = Vector2( 0, 0 )
+83/shape_offset = Vector2( 0, 0 )
+83/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+83/shape_one_way = false
+83/shape_one_way_margin = 0.0
+83/shapes = [  ]
+83/z_index = 0
+84/name = "Asset-Sheet-with-transparency.png 84"
+84/texture = ExtResource( 7 )
+84/tex_offset = Vector2( 0, 0 )
+84/modulate = Color( 1, 1, 1, 1 )
+84/region = Rect2( 10, 171, 27, 27 )
+84/tile_mode = 0
+84/occluder_offset = Vector2( 0, 0 )
+84/navigation_offset = Vector2( 0, 0 )
+84/shape_offset = Vector2( 0, 0 )
+84/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+84/shape_one_way = false
+84/shape_one_way_margin = 0.0
+84/shapes = [  ]
+84/z_index = 0
+85/name = "Asset-Sheet-with-transparency.png 85"
+85/texture = ExtResource( 7 )
+85/tex_offset = Vector2( 0, 0 )
+85/modulate = Color( 1, 1, 1, 1 )
+85/region = Rect2( 9, 220, 27, 24 )
+85/tile_mode = 0
+85/occluder_offset = Vector2( 0, 0 )
+85/navigation_offset = Vector2( 0, 0 )
+85/shape_offset = Vector2( 0, 0 )
+85/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+85/shape_one_way = false
+85/shape_one_way_margin = 0.0
+85/shapes = [  ]
+85/z_index = 0
+86/name = "Asset-Sheet-with-transparency.png 86"
+86/texture = ExtResource( 7 )
+86/tex_offset = Vector2( 0, 0 )
+86/modulate = Color( 1, 1, 1, 1 )
+86/region = Rect2( 102, 266, 36, 28 )
+86/tile_mode = 0
+86/occluder_offset = Vector2( 0, 0 )
+86/navigation_offset = Vector2( 0, 0 )
+86/shape_offset = Vector2( 0, 0 )
+86/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+86/shape_one_way = false
+86/shape_one_way_margin = 0.0
+86/shapes = [  ]
+86/z_index = 0
+87/name = "Asset-Sheet-with-transparency.png 87"
+87/texture = ExtResource( 7 )
+87/tex_offset = Vector2( 0, 0 )
+87/modulate = Color( 1, 1, 1, 1 )
+87/region = Rect2( 12, 268, 23, 26 )
+87/tile_mode = 0
+87/occluder_offset = Vector2( 0, 0 )
+87/navigation_offset = Vector2( 0, 0 )
+87/shape_offset = Vector2( 0, 0 )
+87/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+87/shape_one_way = false
+87/shape_one_way_margin = 0.0
+87/shapes = [  ]
+87/z_index = 0
+88/name = "Asset-Sheet-with-transparency.png 88"
+88/texture = ExtResource( 7 )
+88/tex_offset = Vector2( 0, 0 )
+88/modulate = Color( 1, 1, 1, 1 )
+88/region = Rect2( 149, 375, 32, 35 )
+88/tile_mode = 0
+88/occluder_offset = Vector2( 0, 0 )
+88/navigation_offset = Vector2( 0, 0 )
+88/shape_offset = Vector2( 0, 0 )
+88/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+88/shape_one_way = false
+88/shape_one_way_margin = 0.0
+88/shapes = [  ]
+88/z_index = 0
+89/name = "Asset-Sheet-with-transparency.png 89"
+89/texture = ExtResource( 7 )
+89/tex_offset = Vector2( 0, 0 )
+89/modulate = Color( 1, 1, 1, 1 )
+89/region = Rect2( 150, 422, 25, 36 )
+89/tile_mode = 0
+89/occluder_offset = Vector2( 0, 0 )
+89/navigation_offset = Vector2( 0, 0 )
+89/shape_offset = Vector2( 0, 0 )
+89/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+89/shape_one_way = false
+89/shape_one_way_margin = 0.0
+89/shapes = [  ]
+89/z_index = 0
+90/name = "Asset-Sheet-with-transparency.png 90"
+90/texture = ExtResource( 7 )
+90/tex_offset = Vector2( 0, 0 )
+90/modulate = Color( 1, 1, 1, 1 )
+90/region = Rect2( 99, 374, 35, 31 )
+90/tile_mode = 0
+90/occluder_offset = Vector2( 0, 0 )
+90/navigation_offset = Vector2( 0, 0 )
+90/shape_offset = Vector2( 0, 0 )
+90/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+90/shape_one_way = false
+90/shape_one_way_margin = 0.0
+90/shapes = [  ]
+90/z_index = 0
+91/name = "Asset-Sheet-with-transparency.png 91"
+91/texture = ExtResource( 7 )
+91/tex_offset = Vector2( 0, 0 )
+91/modulate = Color( 1, 1, 1, 1 )
+91/region = Rect2( 101, 422, 30, 38 )
+91/tile_mode = 0
+91/occluder_offset = Vector2( 0, 0 )
+91/navigation_offset = Vector2( 0, 0 )
+91/shape_offset = Vector2( 0, 0 )
+91/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+91/shape_one_way = false
+91/shape_one_way_margin = 0.0
+91/shapes = [  ]
+91/z_index = 0
+92/name = "Asset-Sheet-with-transparency.png 92"
+92/texture = ExtResource( 7 )
+92/tex_offset = Vector2( 0, 0 )
+92/modulate = Color( 1, 1, 1, 1 )
+92/region = Rect2( 369, 180, 65, 57 )
+92/tile_mode = 0
+92/occluder_offset = Vector2( 0, 0 )
+92/navigation_offset = Vector2( 0, 0 )
+92/shape_offset = Vector2( 0, 0 )
+92/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+92/shape_one_way = false
+92/shape_one_way_margin = 0.0
+92/shapes = [  ]
+92/z_index = 0
+93/name = "Asset-Sheet-with-transparency.png 93"
+93/texture = ExtResource( 7 )
+93/tex_offset = Vector2( 0, 0 )
+93/modulate = Color( 1, 1, 1, 1 )
+93/region = Rect2( 435, 182, 61, 56 )
+93/tile_mode = 0
+93/occluder_offset = Vector2( 0, 0 )
+93/navigation_offset = Vector2( 0, 0 )
+93/shape_offset = Vector2( 0, 0 )
+93/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+93/shape_one_way = false
+93/shape_one_way_margin = 0.0
+93/shapes = [  ]
+93/z_index = 0
+94/name = "Asset-Sheet-with-transparency.png 94"
+94/texture = ExtResource( 7 )
+94/tex_offset = Vector2( 0, 0 )
+94/modulate = Color( 1, 1, 1, 1 )
+94/region = Rect2( 503, 177, 70, 65 )
+94/tile_mode = 0
+94/occluder_offset = Vector2( 0, 0 )
+94/navigation_offset = Vector2( 0, 0 )
+94/shape_offset = Vector2( 0, 0 )
+94/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+94/shape_one_way = false
+94/shape_one_way_margin = 0.0
+94/shapes = [  ]
+94/z_index = 0
+95/name = "Asset-Sheet-with-transparency.png 95"
+95/texture = ExtResource( 7 )
+95/tex_offset = Vector2( 0, 0 )
+95/modulate = Color( 1, 1, 1, 1 )
+95/region = Rect2( 497, 245, 73, 59 )
+95/tile_mode = 0
+95/occluder_offset = Vector2( 0, 0 )
+95/navigation_offset = Vector2( 0, 0 )
+95/shape_offset = Vector2( 0, 0 )
+95/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+95/shape_one_way = false
+95/shape_one_way_margin = 0.0
+95/shapes = [  ]
+95/z_index = 0
+96/name = "Asset-Sheet-with-transparency.png 96"
+96/texture = ExtResource( 7 )
+96/tex_offset = Vector2( 0, 0 )
+96/modulate = Color( 1, 1, 1, 1 )
+96/region = Rect2( 432, 237, 62, 77 )
+96/tile_mode = 0
+96/occluder_offset = Vector2( 0, 0 )
+96/navigation_offset = Vector2( 0, 0 )
+96/shape_offset = Vector2( 0, 0 )
+96/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+96/shape_one_way = false
+96/shape_one_way_margin = 0.0
+96/shapes = [  ]
+96/z_index = 0
+97/name = "Asset-Sheet-with-transparency.png 97"
+97/texture = ExtResource( 7 )
+97/tex_offset = Vector2( 0, 0 )
+97/modulate = Color( 1, 1, 1, 1 )
+97/region = Rect2( 368, 241, 58, 63 )
+97/tile_mode = 0
+97/occluder_offset = Vector2( 0, 0 )
+97/navigation_offset = Vector2( 0, 0 )
+97/shape_offset = Vector2( 0, 0 )
+97/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+97/shape_one_way = false
+97/shape_one_way_margin = 0.0
+97/shapes = [  ]
+97/z_index = 0
+98/name = "Asset-Sheet-with-transparency.png 98"
+98/texture = ExtResource( 7 )
+98/tex_offset = Vector2( 0, 0 )
+98/modulate = Color( 1, 1, 1, 1 )
+98/region = Rect2( 134, 22, 21, 19 )
+98/tile_mode = 0
+98/occluder_offset = Vector2( 0, 0 )
+98/navigation_offset = Vector2( 0, 0 )
+98/shape_offset = Vector2( 0, 0 )
+98/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+98/shape_one_way = false
+98/shape_one_way_margin = 0.0
+98/shapes = [  ]
+98/z_index = 0
+99/name = "Asset-Sheet-with-transparency.png 99"
+99/texture = ExtResource( 7 )
+99/tex_offset = Vector2( 0, 0 )
+99/modulate = Color( 1, 1, 1, 1 )
+99/region = Rect2( 177, 0, 16, 15 )
+99/tile_mode = 0
+99/occluder_offset = Vector2( 0, 0 )
+99/navigation_offset = Vector2( 0, 0 )
+99/shape_offset = Vector2( 0, 0 )
+99/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+99/shape_one_way = false
+99/shape_one_way_margin = 0.0
+99/shapes = [  ]
+99/z_index = 0
+100/name = "Asset-Sheet-with-transparency.png 100"
+100/texture = ExtResource( 7 )
+100/tex_offset = Vector2( 0, 0 )
+100/modulate = Color( 1, 1, 1, 1 )
+100/region = Rect2( 140, 95, 20, 17 )
+100/tile_mode = 0
+100/occluder_offset = Vector2( 0, 0 )
+100/navigation_offset = Vector2( 0, 0 )
+100/shape_offset = Vector2( 0, 0 )
+100/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+100/shape_one_way = false
+100/shape_one_way_margin = 0.0
+100/shapes = [  ]
+100/z_index = 0
+101/name = "Asset-Sheet-with-transparency.png 101"
+101/texture = ExtResource( 7 )
+101/tex_offset = Vector2( 0, 0 )
+101/modulate = Color( 1, 1, 1, 1 )
+101/region = Rect2( 126, 95, 17, 19 )
+101/tile_mode = 0
+101/occluder_offset = Vector2( 0, 0 )
+101/navigation_offset = Vector2( 0, 0 )
+101/shape_offset = Vector2( 0, 0 )
+101/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+101/shape_one_way = false
+101/shape_one_way_margin = 0.0
+101/shapes = [  ]
+101/z_index = 0
+102/name = "Asset-Sheet-with-transparency.png 102"
+102/texture = ExtResource( 7 )
+102/tex_offset = Vector2( 0, 0 )
+102/modulate = Color( 1, 1, 1, 1 )
+102/region = Rect2( 98, 127, 30, 30 )
+102/tile_mode = 0
+102/occluder_offset = Vector2( 0, 0 )
+102/navigation_offset = Vector2( 0, 0 )
+102/shape_offset = Vector2( 0, 0 )
+102/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+102/shape_one_way = false
+102/shape_one_way_margin = 0.0
+102/shapes = [  ]
+102/z_index = 0
+103/name = "Asset-Sheet-with-transparency.png 103"
+103/texture = ExtResource( 7 )
+103/tex_offset = Vector2( 0, 0 )
+103/modulate = Color( 1, 1, 1, 1 )
+103/region = Rect2( 129, 126, 30, 33 )
+103/tile_mode = 0
+103/occluder_offset = Vector2( 0, 0 )
+103/navigation_offset = Vector2( 0, 0 )
+103/shape_offset = Vector2( 0, 0 )
+103/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+103/shape_one_way = false
+103/shape_one_way_margin = 0.0
+103/shapes = [  ]
+103/z_index = 0
+104/name = "Asset-Sheet-with-transparency.png 104"
+104/texture = ExtResource( 7 )
+104/tex_offset = Vector2( 0, 0 )
+104/modulate = Color( 1, 1, 1, 1 )
+104/region = Rect2( 222, 366, 18, 18 )
+104/tile_mode = 0
+104/occluder_offset = Vector2( 0, 0 )
+104/navigation_offset = Vector2( 0, 0 )
+104/shape_offset = Vector2( 0, 0 )
+104/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+104/shape_one_way = false
+104/shape_one_way_margin = 0.0
+104/shapes = [  ]
+104/z_index = 0
+
+[node name="level5" type="Node2D"]
+
+[node name="PauseLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="PauseScreen" parent="PauseLayer" instance=ExtResource( 9 )]
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = -492.758
+margin_top = -976.541
+margin_right = -145.758
+margin_bottom = -629.541
+rect_scale = Vector2( 15.8965, 5.02337 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+margin_left = 751.009
+margin_top = 119.891
+margin_right = 879.009
+margin_bottom = 183.891
+rect_scale = Vector2( 13.0799, 12.5605 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -515.579
+margin_top = 118.205
+margin_right = -387.579
+margin_bottom = 158.205
+rect_scale = Vector2( 15.033, 18.016 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 517.324
+margin_top = 561.381
+margin_right = 645.324
+margin_bottom = 801.381
+rect_scale = Vector2( 14.5103, 4.61875 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = -539.661
+margin_top = 542.72
+margin_right = -411.661
+margin_bottom = 782.72
+rect_scale = Vector2( 12.2658, 4.5913 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, -0.00012207 )
+tile_set = SubResource( 33 )
+cell_size = Vector2( 8, 8 )
+collision_mask = 5
+format = 1
+tile_data = PoolIntArray( -7995041, -2147483625, 0, -7929505, -2147483625, 0, -7863969, -2147483625, 0, -7798433, -2147483625, 0, -7732897, -2147483625, 0, -7667361, -2147483625, 0, -7601825, -2147483625, 0, -7536289, -2147483625, 0, -7470753, -2147483625, 0, -7405217, -2147483625, 0, -7339681, -2147483625, 0, -7274145, -2147483625, 0, -7208609, -2147483625, 0, -7143073, -2147483625, 0, -7077537, -2147483625, 0, -7012001, -2147483625, 0, -6881315, 16, 0, -6881313, -1610612720, 0, -6881312, -1610612720, 0, -6881306, -1610612720, 0, -6881300, -1610612720, 0, -6881294, -1610612720, 0, -6881293, -1610612720, 0, -6881287, -1610612720, 0, -6881281, -1610612720, 0, -6946811, -1610612720, 0, -6946805, -1610612720, 0, -6946799, -1610612720, 0, -6946793, -1610612720, 0, -6946792, -1610612720, 0, -6946786, -1610612720, 0, -6946780, -1610612720, 0, -6946774, -1610612720, 0, -6946768, -1610612720, 0, -6881174, 536870932, 0, -6749857, -2147483625, 0, -6684566, 536870932, 0, -6684321, -2147483625, 0, -6618785, -2147483625, 0, -6488099, 16, 0, -6553249, -2147483625, 0, -6487958, 536870932, 0, -6487713, -2147483625, 0, -6422177, -2147483625, 0, -6356641, -2147483625, 0, -6291350, 536870932, 0, -6291105, -2147483625, 0, -6225569, -2147483625, 0, -6094883, 16, 0, -6160033, -2147483625, 0, -6094742, 536870932, 0, -6094497, -2147483625, 0, -6028961, -2147483625, 0, -5963725, 536870935, 0, -5963721, 536870935, 0, -5963704, 536870935, 0, -5963700, 536870935, 0, -5963699, 536870935, 0, -5963598, 1610612755, 0, -5963589, 1610612755, 0, -5963581, 1610612755, 0, -5963574, 1610612755, 0, -5963566, 1610612755, 0, -5963558, 1610612755, 0, -5963550, 1610612755, 0, -5963543, 1610612755, 0, -5963536, 1610612755, 0, -5963529, 1610612755, 0, -5963522, 1610612755, 0, -5963515, 1610612755, 0, -5963508, 1610612755, 0, -5963501, 1610612755, 0, -5963494, 1610612755, 0, -5963486, 1610612755, 0, -5963478, 1610612755, 0, -5963425, -2147483625, 0, -5898153, 536870936, 0, -5898134, 536870932, 0, -5897889, -2147483625, 0, -5832353, -2147483625, 0, -5701667, 16, 0, -5767104, 536870938, 0, -5767102, 536870938, 0, -5767071, -536870881, 0, -5766817, -2147483625, 0, -5701526, 536870932, 0, -5701455, -536870882, 0, -5701446, -536870882, 0, -5701438, -536870882, 0, -5701431, -536870882, 0, -5701423, -536870882, 0, -5701415, -536870882, 0, -5701407, -536870882, 0, -5701400, -536870882, 0, -5701393, -536870882, 0, -5701386, -536870882, 0, -5701379, -536870882, 0, -5701372, -536870882, 0, -5701365, -536870882, 0, -5701358, -536870882, 0, -5701351, -536870882, 0, -5701343, -536870882, 0, -5701335, -536870882, 0, -5701281, -2147483625, 0, -5636079, 23, 0, -5636062, 536870933, 0, -5504996, 536870935, 0, -5504992, 536870935, 0, -5504991, 536870935, 0, -5504990, 536870935, 0, -5504989, 536870935, 0, -5504988, 536870935, 0, -5504987, 536870935, 0, -5504986, 536870935, 0, -5504985, 536870935, 0, -5504984, 536870935, 0, -5504983, 536870935, 0, -5504982, 536870935, 0, -5504981, 536870935, 0, -5504980, 536870935, 0, -5504979, 536870935, 0, -5504978, 536870935, 0, -5504977, 536870935, 0, -5504976, 536870935, 0, -5504975, 536870935, 0, -5504974, 536870935, 0, -5504973, 536870935, 0, -5504972, 536870935, 0, -5504971, 536870935, 0, -5504970, 536870935, 0, -5504969, 536870935, 0, -5504968, 536870935, 0, -5504967, 536870935, 0, -5504966, 536870935, 0, -5504965, 536870935, 0, -5504964, 536870935, 0, -5504963, 536870935, 0, -5504962, 536870935, 0, -5504961, 536870935, 0, -5504960, 536870935, 0, -5504959, 536870935, 0, -5504958, 536870935, 0, -5504957, 536870935, 0, -5504956, 536870935, 0, -5504955, 536870935, 0, -5504954, 536870935, 0, -5504953, 536870935, 0, -5504952, 536870935, 0, -5504951, 536870935, 0, -5504950, 536870935, 0, -5504949, 536870935, 0, -5504948, 536870935, 0, -5504947, 536870935, 0, -5504946, 536870935, 0, -5504945, 536870935, 0, -5504944, 536870935, 0, -5504943, 536870935, 0, -5504942, 536870935, 0, -5504941, 536870935, 0, -5504940, 536870935, 0, -5504939, 536870935, 0, -5504938, 536870935, 0, -5504937, 536870935, 0, -5504936, 536870935, 0, -5504935, 536870935, 0, -5504934, 536870935, 0, -5504933, 536870935, 0, -5504932, 536870935, 0, -5504931, 536870935, 0, -5504930, 536870935, 0, -5504929, 536870935, 0, -5504928, 536870935, 0, -5504927, 536870935, 0, -5504926, 536870935, 0, -5504925, 536870935, 0, -5504924, 536870935, 0, -5504923, 536870935, 0, -5504922, 536870935, 0, -5504921, 536870935, 0, -5504920, 536870935, 0, -5504919, 536870935, 0, -5504918, 536870935, 0, -5504917, 536870935, 0, -5504916, 536870935, 0, -5504915, 536870935, 0, -5504914, 536870935, 0, -5504913, 536870935, 0, -5504912, 536870935, 0, -5504911, 536870935, 0, -5504910, 536870935, 0, -5504909, 536870935, 0, -5504908, 536870935, 0, -5504907, 536870935, 0, -5504906, 536870935, 0, -5504905, 536870935, 0, -5504903, 536870935, 0, -5504902, 536870935, 0, -5504901, 536870935, 0, -5504900, 536870935, 0, -5504899, 536870935, 0, -5504898, 536870935, 0, -5504897, 536870935, 0, -5504896, 536870935, 0, -5504895, 536870935, 0, -5504894, 536870935, 0, -5504893, 536870935, 0, -5504892, 536870935, 0, -5504891, 536870935, 0, -5504890, 536870935, 0, -5504889, 536870935, 0, -5504888, 536870935, 0, -5504887, 536870935, 0, -5504886, 536870935, 0, -5504885, 536870935, 0, -5504884, 536870935, 0, -5504883, 536870935, 0, -5504882, 536870935, 0, -5504881, 536870935, 0, -5504880, 536870935, 0, -5504879, 536870935, 0, -5504878, 536870935, 0, -5504877, 536870935, 0, -5504876, 536870935, 0, -5504875, 536870935, 0, -5504874, 536870935, 0, -5504873, 536870935, 0, -5504872, 536870935, 0, -5504871, 536870935, 0, -5504870, 536870935, 0, -5504869, 536870935, 0, -5504868, 536870935, 0, -5504867, 536870935, 0, -5504866, 536870935, 0, -5504865, 536870935, 0, -5504864, 536870935, 0, -5504863, 536870935, 0, -5504862, 536870935, 0, -5504861, 536870935, 0, -5504860, 536870935, 0, -5504859, 536870935, 0, -5504858, 536870935, 0, -5504857, 536870935, 0, -5504856, 536870935, 0, -5504855, 536870935, 0, -5504854, 536870935, 0, -5504853, 536870935, 0, -5504852, 536870935, 0, -5504851, 536870935, 0, -5504850, 536870935, 0, -5504849, 536870935, 0, -5504848, 536870935, 0, -5504847, 536870935, 0, -5504846, 536870935, 0, -5504845, 536870935, 0, -5504844, 536870935, 0, -5504843, 536870935, 0, -5504842, 536870935, 0, -5504841, 536870935, 0, -5504840, 536870935, 0, -5504839, 536870935, 0, -5504838, 536870935, 0, -5504837, 536870935, 0, -5504836, 536870935, 0, -5504835, 536870935, 0, -5504834, 536870935, 0, -5504833, 536870935, 0, -5504832, 536870935, 0, -5504831, 536870935, 0, -5504830, 536870935, 0, -5504829, 536870935, 0, -5504828, 536870935, 0, -5504827, 536870935, 0, -5504826, 536870935, 0, -5504825, 536870935, 0, -5504824, 536870935, 0, -5504823, 536870935, 0, -5504822, 536870935, 0, -5504821, 536870935, 0, -5504820, 536870935, 0, -5504819, 536870935, 0, -5504818, 536870935, 0, -5504817, 536870935, 0, -5504816, 536870935, 0, -5504815, 536870935, 0, -5504814, 536870935, 0, -5504813, 536870935, 0, -5504812, 536870935, 0, -5504811, 536870935, 0, -5504810, 536870935, 0, -5504809, 536870935, 0, -5504808, 536870935, 0, -5504807, 536870935, 0, -5504806, 536870935, 0, -5504805, 536870935, 0, -5504804, 536870935, 0, -5504803, 536870935, 0, -5504802, 536870935, 0, -5504801, 536870935, 0, -5504797, 536870935, 0, -5504796, 536870935, 0, -5504795, 536870935, 0, -5504794, 536870935, 0, -5504793, 536870935, 0, -5504792, 536870935, 0, -5504791, 536870935, 0, -5504790, 536870935, 0, -5504789, 536870935, 0, -5504788, 536870935, 0, -5504787, 536870935, 0, -5504786, 536870935, 0, -5504785, 536870935, 0, -5504784, 536870935, 0, -5504783, 536870935, 0, -5504782, 536870935, 0, -5504781, 536870935, 0, -5504780, 536870935, 0, -5504779, 536870935, 0, -5504778, 536870935, 0, -5504777, 536870935, 0, -5504776, 536870935, 0, -5504775, 536870935, 0, -5504774, 536870935, 0, -5504773, 536870935, 0, -5504772, 536870935, 0, -5504771, 536870935, 0, -5504770, 536870935, 0, -5504769, 536870935, 0, -5504768, 536870935, 0, -5504767, 536870935, 0, -5504766, 536870935, 0, -5504765, 536870935, 0, -5504762, 536870935, 0, -5504761, 536870935, 0, -5504760, 536870935, 0, -5504759, 536870935, 0, -5504758, 536870935, 0, -5504757, 536870935, 0, -5504756, 536870935, 0, -5504755, 536870935, 0, -5504754, 536870935, 0, -5504753, 536870935, 0, -5504752, 536870935, 0, -5504751, 536870935, 0, -5504750, 536870935, 0, -5504749, 536870935, 0, -5504748, 536870935, 0, -5504747, 536870935, 0, -5504746, 536870935, 0, -5504745, 536870935, 0, -5504744, 536870935, 0, -5504743, 536870935, 0, -5504742, 536870935, 0, -5504741, 536870935, 0, -5504740, 536870935, 0, -5504739, 536870935, 0, -5504738, 536870935, 0, -5504737, 536870935, 0, -5504736, 536870935, 0, -5504735, 536870935, 0, -5504734, 536870935, 0, -5504733, 536870935, 0, -5504732, 536870935, 0, -5504731, 536870935, 0, -5504730, 536870935, 0, -5504729, 536870935, 0, -5504728, 536870935, 0, -5504727, 536870935, 0, -5504726, 536870935, 0, -5504725, 536870935, 0, -5504724, 536870935, 0, -5504723, 536870935, 0, -5504722, 536870935, 0, -5504721, 536870935, 0, -5504720, 536870935, 0, -5504719, 536870935, 0, -5504718, 536870935, 0, -5504717, 536870935, 0, -5504716, 536870935, 0, -5504715, 536870935, 0, -5504714, 536870935, 0, -5504713, 536870935, 0, -5504712, 536870935, 0, -5504711, 536870935, 0, -5504710, 536870935, 0, -5504709, 536870935, 0, -5504708, 536870935, 0, -5504707, 536870935, 0, -5504706, 536870935, 0, -5504705, 536870935, 0, -5504704, 536870935, 0, -5504703, 536870935, 0, -5504702, 536870935, 0, -5504701, 536870935, 0, -5504700, 536870935, 0, -5504699, 536870935, 0, -5504698, 536870935, 0, -5504697, 536870935, 0, -5504696, 536870935, 0, -5504695, 536870935, 0, -5504694, 536870935, 0, -5504693, 536870935, 0, -5504692, 536870935, 0, -5504691, 536870935, 0, -5504690, 536870935, 0, -5504689, 536870935, 0, -5504688, 536870935, 0, -5504687, 536870935, 0, -5504686, 536870935, 0, -5504685, 536870935, 0, -5504684, 536870935, 0, -5504683, 536870935, 0, -5504682, 536870935, 0, -5504681, 536870935, 0, -5504680, 536870935, 0, -5504679, 536870935, 0, -5504678, 536870935, 0, -5504677, 536870935, 0, -5439481, 23, 0, -5439453, 536870931, 0, -5439449, 536870931, 0, -5439445, 536870931, 0, -5439440, 536870931, 0, -5439436, 536870931, 0, -5439432, 536870931, 0, -5439428, 536870931, 0, -5439424, 536870931, 0, -5439418, 536870931, 0, -5439413, 536870931, 0, -5439404, 536870931, 0, -5439397, 536870931, 0, -5439392, 536870931, 0, -5439387, 536870931, 0, -5439383, 536870931, 0, -5439379, 536870931, 0, -5439374, 536870931, 0, -5439366, 536870931, 0, -5439359, 536870931, 0, -5439352, 536870931, 0, -5439344, 536870931, 0, -5439337, 536870931, 0, -5439331, -1610612721, 0, -5439330, 536870931, 0, -5439325, 536870931, 0, -5439318, 536870931, 0, -5439312, -536870880, 0, -5439303, -536870880, 0, -5439295, -536870880, 0, -5439288, -536870880, 0, -5439280, -536870880, 0, -5439272, -536870880, 0, -5439264, -536870880, 0, -5439257, -536870880, 0, -5439250, -536870880, 0, -5439243, -536870880, 0, -5439236, -536870880, 0, -5439229, -536870880, 0, -5439222, -536870880, 0, -5439215, -536870880, 0, -5439208, -536870880, 0, -5439200, -536870880, 0, -5439192, -536870880, 0, -5308451, 16, 0, -5308281, -536870882, 0, -5242771, -536870884, 0, -5242766, -536870884, 0, -5242702, 536870931, 0, -5242693, 536870931, 0, -5242685, 536870931, 0, -5242678, 536870931, 0, -5242670, 536870931, 0, -5242662, 536870931, 0, -5242654, 536870931, 0, -5242647, 536870931, 0, -5242640, 536870931, 0, -5242633, 536870931, 0, -5242626, 536870931, 0, -5242619, 536870931, 0, -5242612, 536870931, 0, -5242605, 536870931, 0, -5242598, 536870931, 0, -5242590, 536870931, 0, -5242582, 536870931, 0, -5177309, 536870931, 0, -5177187, -1610612721, 0, -4980739, 23, 0, -4915235, 16, 0, -4980615, -536870882, 0, -4915165, 536870931, 0, -4915038, -536870882, 0, -4849593, -536870882, 0, -4849521, -536870882, 0, -4849512, -536870882, 0, -4783971, -1610612721, 0, -4522019, 16, 0, -4521997, -1610612720, 0, -4521991, -1610612720, 0, -4521985, -1610612720, 0, -4587515, -1610612720, 0, -4587509, -1610612720, 0, -4587503, 1610612752, 0, -4587415, -536870884, 0, -4390755, -1610612721, 0, -4128803, 16, 0, -4194287, 1610612752, 0, -4194240, -536870882, 0, -4194134, -536870882, 0, -4128668, -536870884, 0, -4063103, -536870882, 0, -3997539, -1610612721, 0, -3932003, -1610612721, 0, -3735587, 16, 0, -3735562, -1610612722, 0, -3801071, 1610612752, 0, -3801035, 536870934, 0, -3538787, -1610612721, 0, -3473366, 536870934, 0, -3342371, 16, 0, -3342357, 536870932, 0, -3342346, -1610612722, 0, -3407855, 1610612752, 0, -3342317, 536870932, 0, -3211278, 536870938, 0, -3276760, 536870938, 0, -3145749, 536870932, 0, -3080221, 536870937, 0, -3145709, 536870933, 0, -3145702, 536870937, 0, -3145693, 536870939, 0, -3145668, -536870882, 0, -3145571, -1610612721, 0, -3080111, -536870882, 0, -2949176, 23, 0, -2949174, 23, 0, -2949170, 23, 0, -2949169, 23, 0, -2949168, 23, 0, -2949167, 23, 0, -2949166, 23, 0, -2949165, 23, 0, -2949164, 23, 0, -2949163, 23, 0, -2949162, 23, 0, -2949161, 23, 0, -2949160, 23, 0, -2949159, 23, 0, -2949155, 536870935, 0, -2949152, 536870935, 0, -2949148, 536870935, 0, -2949144, 536870935, 0, -2949140, 536870935, 0, -2949136, 536870935, 0, -2949132, 23, 0, -2949124, 23, 0, -3014649, 23, 0, -3014639, 536870935, 0, -3014635, 536870935, 0, -3014631, 536870935, 0, -3014630, 536870935, 0, -3014626, 536870935, 0, -3014622, 536870935, 0, -3014618, 536870935, 0, -3014605, 536870934, 0, -3014480, -536870882, 0, -2752568, 536870927, 0, -2752355, -1610612721, 0, -2621496, 536870927, 0, -2490251, -536870882, 0, -2424832, 23, 0, -2424689, -536870882, 0, -2293816, 536870927, 0, -2359139, -1610612721, 0, -2228198, 23, 0, -2162642, -536870882, 0, -2162530, -536870882, 0, -2031633, 23, 0, -1966111, 23, 0, -2031603, 23, 0, -2031417, -536870882, 0, -1900600, 536870927, 0, -1965923, -1610612721, 0, -1900470, -536870882, 0, -1834917, -536870882, 0, -1769437, 23, 0, -1769295, -536870882, 0, -1638400, 23, 0, -1507384, 536870927, 0, -1572842, 23, 0, -1572707, -1610612721, 0, -1441832, 23, 0, -1507192, -536870882, 0, -1441656, -536870882, 0, -1376205, -536870882, 0, -1179672, 23, 0, -1245174, 23, 0, -1114168, 536870927, 0, -1179491, -1610612721, 0, -720952, 536870927, 0, -786372, -536870882, 0, -786275, -1610612721, 0, -720765, -536870882, 0, -589828, 23, 0, -655360, 23, 0, -655356, 23, 0, -655352, 23, 0, -327736, 536870927, 0, -393059, -1610612721, 0, -262200, 536870927, 0, -262175, 23, 0, -262171, 23, 0, -327573, -536870882, 0, -196586, 23, 0, -196582, 23, 0, -196578, 23, 0, -130925, -536870882, 0, -65379, -1610612721, 0, 172, -536870882, 0, 131016, 536870927, 0, 196598, 23, 0, 196602, 536870935, 0, 196606, 536870935, 0, 131074, 536870935, 0, 131076, 536870935, 0, 131079, 536870935, 0, 131083, 536870935, 0, 327792, 15, 0, 327798, 15, 0, 327804, 15, 0, 327810, 15, 0, 327816, 15, 0, 327817, 15, 0, 327823, 15, 0, 327829, 15, 0, 327835, 15, 0, 327841, 16, 0, 524232, 536870927, 0, 721057, 16, 0, 917448, 536870926, 0, 982984, 536870926, 0, 982990, 536870926, 0, 982996, 536870926, 0, 983002, 536870926, 0, 983008, 536870926, 0, 983014, 536870926, 0, 983020, 536870926, 0, 983026, 536870926, 0, 983032, 536870926, 0, 983034, 536870926, 0, 917517, 536870926, 0, 917534, 536870926, 0, 917540, 536870927, 0, 917546, 536870927, 0, 917552, 536870927, 0, 917558, 536870927, 0, 917564, 536870927, 0, 917570, 536870927, 0, 917576, 536870927, 0, 917582, 536870927, 0, 1114056, 16, 0, 1114065, 536870931, 0, 1114084, 536870931, 0, 1114101, 536870931, 0, 1048737, 16, 0, 1245269, 536870983, 0, 1507272, 16, 0, 1441953, 16, 0, 1507334, -1610612639, 0, 1638404, 70, 0, 1638493, 536870983, 0, 1703957, 67, 0, 1900488, 16, 0, 1835039, -1610612641, 0, 1835169, 16, 0, 1900645, 536870982, 0, 1966111, 67, 0, 1966114, 93, 0, 2162678, 536870985, 0, 2162680, 97, 0, 2097196, 68, 0, 2097270, 536870982, 0, 2293704, 16, 0, 2228385, 16, 0, 2359275, 536870984, 0, 2424812, 97, 0, 2359428, 536870980, 0, 2424841, -1610612641, 0, 2555871, -1610612641, 0, 2621406, 536870982, 0, 2555934, -1610612641, 0, 2555935, -1610612641, 0, 2686920, 16, 0, 2621586, 536870981, 0, 2621601, -1610612722, 0, 2687009, -1610612644, 0, 2687033, -1610612670, 0, 3080136, 16, 0, 3014817, -1610612722, 0, 3145679, 536870982, 0, 3080213, 95, 0, 3080221, -1073741731, 0, 3211307, -1610612664, 0, 3342458, 536870982, 0, 3473352, 16, 0, 3408008, 536870983, 0, 3408033, -1610612722, 0, 3538986, -1610612644, 0, 3735521, 96, 0, 3670125, 68, 0, 3866568, 16, 0, 3801137, 70, 0, 3801249, -1610612722, 0, 3932147, 97, 0, 3997640, 16, 0, 3997662, 68, 0, 3932175, -1610612644, 0, 3932176, -1610612644, 0, 3932254, 70, 0, 4259791, 96, 0, 4194329, 96, 0, 4194465, -1073741810, 0, 4390856, 1610612752, 0, 4390868, 14, 0, 4390874, 14, 0, 4390875, 96, 0, 4390880, 14, 0, 4390888, 46, 0, 4325391, 14, 0, 4325403, 14, 0, 4325415, 14, 0, 4325427, 14, 0, 4325433, 14, 0, 4325439, 14, 0, 4325457, 14, 0, 4325517, 1610612750, 0, 4325521, 1610612750, 0, 4325525, 1610612750, 0, 4325531, 1610612750, 0, 4587681, -1073741810, 0, 4718583, 46, 0, 4784072, 1610612752, 0, 4784226, 16, 0, 4915203, 46, 0, 4915225, 46, 0, 4915229, 46, 0, 5046245, 46, 0, 4980897, -1073741810, 0, 5111752, -1610612690, 0, 5177442, 16, 0, 5308360, -1610612690, 0, 5308405, 46, 0, 5373981, 536870998, 0, 5373984, 536871002, 0, 5373997, 46, 0, 5374113, -1073741810, 0, 5504968, -1610612690, 0, 5439511, 102, 0, 5505040, 46, 0, 5570658, 16, 0, 5701576, -1610612690, 0, 5767138, 103, 0, 5701632, 46, 0, 5767207, 536870998, 0, 5767210, 536871002, 0, 5767329, -1073741810, 0, 5898184, -1610612690, 0, 5898271, 46, 0, 5898338, 16, 0, 5963780, 536870994, 0, 6094792, -1610612690, 0, 6094836, 46, 0, 6029319, 100, 0, 6094893, 77, 0, 6160432, 100, 0, 6160545, -1073741810, 0, 6291400, -1610612690, 0, 6225946, 536870994, 0, 6225948, 536871002, 0, 6291554, 16, 0, 6357035, 46, 0, 6488008, -1610612690, 0, 6488026, 88, 0, 6488032, 102, 0, 6553564, 85, 0, 6619110, 46, 0, 6619119, 99, 0, 6553761, -1073741810, 0, 6684616, -1610612690, 0, 6619180, 536870994, 0, 6619182, 536871002, 0, 6750201, 102, 0, 6684690, 99, 0, 6684770, 16, 0, 6881224, -1610612690, 0, 6946763, 85, 0, 6946766, 101, 0, 7012337, 46, 0, 6946977, -1073741810, 0, 7077832, -1610612690, 0, 7012352, 46, 0, 7012406, 46, 0, 7012450, 16, 0, 7012475, 1610612752, 0, 7012492, 1610612752, 0, 7077905, 536870958, 0, 7077908, 536870958, 0, 7077911, 536870958, 0, 7077914, 536870958, 0, 7077917, 536870958, 0, 7077920, 536870958, 0, 7077923, 536870958, 0, 7274440, -1610612690, 0, 7274508, 536871001, 0, 7274516, 99, 0, 7274531, 102, 0, 7274621, 1610612750, 0, 7274625, 1610612750, 0, 7274630, 1610612750, 0, 7405515, 85, 0, 7340035, 77, 0, 7340042, 536870999, 0, 7340088, 536870992, 0, 7340091, 536871001, 0, 7340193, -1073741810, 0, 7471048, -1610612690, 0, 7405574, 100, 0, 7405666, 16, 0, 7667656, -1610612690, 0, 7602235, 46, 0, 7602243, 46, 0, 7733259, 536870958, 0, 7733262, 536870958, 0, 7733265, 536870958, 0, 7733268, 536870958, 0, 7733271, 536870958, 0, 7733274, 536870958, 0, 7733277, 536870958, 0, 7733280, 536870958, 0, 7733283, 536870958, 0, 7733286, 536870958, 0, 7733289, 536870958, 0, 7733292, 536870958, 0, 7733295, 536870958, 0, 7733298, 536870958, 0, 7733301, 536870958, 0, 7733346, 16, 0, 7733409, -1073741810, 0, 7864264, -1610612690, 0, 7929966, 1610612752, 0, 7929982, 1610612752, 0, 7929992, 1610612752, 0, 7930008, 1610612752, 0, 8060872, -1610612690, 0, 8060902, 46, 0, 8060905, 46, 0, 8060908, 46, 0, 8060911, 46, 0, 7995415, 536871001, 0, 7995470, 46, 0, 8060949, 536870996, 0, 8061026, 16, 0, 8061089, -1073741810, 0, 8191975, 103, 0, 8126499, 103, 0, 8257480, -1610612690, 0, 8323037, 76, 0, 8257646, -1610612720, 0, 8257652, -1610612720, 0, 8257658, -1610612720, 0, 8257672, -1610612720, 0, 8257678, -1610612720, 0, 8257684, -1610612720, 0, 8388605, 46, 0, 8323072, 46, 0, 8323075, 46, 0, 8323110, 536871001, 0, 8454088, -1610612690, 0, 8454100, 46, 0, 8454103, 46, 0, 8454106, 46, 0, 8388644, 536870996, 0, 8519674, -1073741723, 0, 8454147, 536870998, 0, 8454305, -1073741810, 0, 8519686, 100, 0, 8519692, 536870958, 0, 8519695, 536870958, 0, 8519698, 536870958, 0, 8519701, 536870958, 0, 8519726, 46, 0, 8519750, 46, 0, 8519767, 46, 0, 8650696, -1610612690, 0, 8716324, -1073741723, 0, 8847304, -1610612690, 0, 8847454, 16, 0, 8847465, 16, 0, 8847484, 16, 0, 8847500, 16, 0, 8847512, 16, 0, 8847521, -1073741810, 0, 9043912, -1610612690, 0, 9043944, -1073741723, 0, 9043952, -1073741723, 0, 9043962, -1073741723, 0, 8978437, -1073741723, 0, 8978438, -1073741723, 0, 8978449, -1073741723, 0, 8978450, -1073741723, 0, 8978461, -1073741723, 0, 8978468, -1073741723, 0, 8978469, -1073741723, 0, 9109479, -536870832, 0, 9109487, -536870832, 0, 9109497, -536870831, 0, 9043973, -1073741744, 0, 9043985, -1073741744, 0, 9043996, -1073741744, 0, 9044004, -1073741744, 0, 9174986, 101, 0, 9174993, 104, 0, 9174994, 104, 0, 9174996, 104, 0, 9174997, 104, 0, 9174998, 104, 0, 9174999, 104, 0, 9175000, 104, 0, 9175001, 104, 0, 9175002, 104, 0, 9175003, 104, 0, 9175004, 104, 0, 9175005, 104, 0, 9175006, 104, 0, 9240520, -1610612690, 0, 9306058, 536870958, 0, 9306061, 536870958, 0, 9306064, 536870958, 0, 9306067, 536870958, 0, 9306070, 536870958, 0, 9306073, 536870958, 0, 9306076, 536870958, 0, 9306079, 536870958, 0, 9306082, 536870958, 0, 9306085, 536870958, 0, 9306088, 536870958, 0, 9306091, 536870958, 0, 9306094, 536870958, 0, 9306097, 536870958, 0, 9306100, 536870958, 0, 9306103, 536870958, 0, 9306106, 536870958, 0, 9306109, 536870958, 0, 9240576, 536870958, 0, 9240579, 536870958, 0, 9240582, 536870958, 0, 9240585, 536870958, 0, 9240588, 536870958, 0, 9240591, 536870958, 0, 9240594, 536870958, 0, 9240597, 536870958, 0, 9240600, 536870958, 0, 9240603, 536870958, 0, 9240606, 536870958, 0, 9240609, 536870958, 0, 9240612, 536870958, 0, 9240615, 536870958, 0, 9240618, 536870958, 0, 9240621, 536870958, 0, 9240624, 536870958, 0, 9240627, 536870958, 0, 9240630, 536870958, 0, 9240633, 536870958, 0, 9240636, 536870958, 0, 9240639, 536870958, 0, 9240642, 536870958, 0, 9240645, 536870958, 0, 9240648, 536870958, 0, 9240651, 536870958, 0, 9240654, 536870958, 0, 9240657, 536870958, 0, 9240660, 536870958, 0, 9240663, 536870958, 0, 9240666, 536870958, 0, 9240667, 536870958, 0, 9240670, 536870958, 0, 9240673, 536870958, 0, 9240676, 536870958, 0, 9240679, 536870958, 0, 9240682, 536870958, 0, 9240685, 536870958, 0, 9240688, 536870958, 0, 9240691, 46, 0, 9240694, 46, 0, 9240697, 46, 0, 9240700, 46, 0, 9240703, 46, 0, 9240706, 46, 0, 9240709, 46, 0, 9240712, 46, 0, 9240715, 46, 0, 9240718, 46, 0, 9240721, 46, 0, 9240724, 46, 0, 9240727, 46, 0, 9240730, 46, 0, 9240733, 46, 0, 9240736, 46, 0 )
+
+[node name="SkeletonEnemy" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 914.089, 1090.67 )
+
+[node name="SkeletonEnemy2" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1064.65, 1094.23 )
+
+[node name="SkeletonEnemy3" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 805.4, 1087.99 )
+
+[node name="SkeletonEnemy4" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1176.9, 1093.34 )
+
+[node name="SkeletonEnemy5" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1259.76, 1092.45 )
+
+[node name="SkeletonEnemy6" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 958.634, 1088.89 )
+
+[node name="SkeletonEnemy7" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 917.482, 983.38 )
+
+[node name="SkeletonEnemy8" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 972.918, 984.01 )
+
+[node name="SkeletonEnemy9" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1183.33, 980.86 )
+
+[node name="SkeletonEnemy10" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1132.3, 978.341 )
+
+[node name="SkeletonEnemy11" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1028.01, 860.737 )
+
+[node name="SkeletonEnemy12" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1078.21, 859.322 )
+
+[node name="SkeletonEnemy13" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( -28.5424, 1091 )
+
+[node name="SkeletonEnemy14" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 193.914, 827.723 )
+
+[node name="SkeletonEnemy16" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1468.54, -794.208 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy20" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2104.64, -797.771 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy17" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2365.42, -793.148 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy21" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2662.98, -800.275 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy18" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1108.32, -794.208 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy22" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 637.923, -822.716 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="SkeletonEnemy19" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 1818.26, -788.814 )
+scale = Vector2( 4.89834, 4.89834 )
+
+[node name="MainPlayer" parent="." instance=ExtResource( 2 )]
+position = Vector2( -258.707, 1103 )
+scale = Vector2( 1.31817, 1.30713 )
+
+[node name="Camera2D" type="Camera2D" parent="MainPlayer"]
+current = true
+limit_left = -500
+limit_top = -1000
+limit_right = 6774
+limit_bottom = 1200
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+editor_draw_limits = true
+
+[node name="NextLevel" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2744.62, -725.165 )
+scale = Vector2( 1.31817, 1.30713 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -20.0
+autoplay = true

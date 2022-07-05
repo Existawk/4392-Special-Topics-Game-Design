@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sci_fi_platformer02.ogg-e3aee0f6e1a21c2324fb635f8794994f.oggstr"
+
+[deps]
+
+source_file="res://CityBurning-Level4/demo/assets/sounds/sci_fi_platformer02.ogg"
+dest_files=[ "res://.import/sci_fi_platformer02.ogg-e3aee0f6e1a21c2324fb635f8794994f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

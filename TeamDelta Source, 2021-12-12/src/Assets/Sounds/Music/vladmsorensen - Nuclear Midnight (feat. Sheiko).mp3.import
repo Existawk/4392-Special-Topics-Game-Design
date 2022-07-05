@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/vladmsorensen - Nuclear Midnight (feat. Sheiko).mp3-c70d1d41c9cee164c1280611eb3ab4ab.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/vladmsorensen - Nuclear Midnight (feat. Sheiko).mp3"
+dest_files=[ "res://.import/vladmsorensen - Nuclear Midnight (feat. Sheiko).mp3-c70d1d41c9cee164c1280611eb3ab4ab.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

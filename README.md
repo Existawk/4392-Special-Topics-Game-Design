@@ -7,8 +7,8 @@ adequately while the latter is subjective, though easily demonstrated.
 
 ---
 This project was worked on by
-[Devin J Brown](https://github.com/devin-j-brown)
-[Alexander Nguyen](https://github.com/amusealex)
-[Edmond Doan](https://github.com/edmonddoan)
-[Andy Vu](https://github.com/vndyau)
+[Devin J Brown](https://github.com/devin-j-brown),
+[Alexander Nguyen](https://github.com/amusealex),
+[Edmond Doan](https://github.com/edmonddoan),
+[Andy Vu](https://github.com/vndyau), and
 [Parker Skinner](https://github.com/Existawk)
